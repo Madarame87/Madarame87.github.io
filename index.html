@@ -1,42 +1,318 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Theodore</title>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Theodore Ouyang</title>
   <style>
+    :root {
+      --maxw: 800px;
+      --pad: 20px;
+    }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-      max-width: 800px;
-      margin: 100px auto;
+      font-family: Cambria, "Times New Roman", serif;
+      font-size: 11pt;
+      max-width: var(--maxw);
+      margin: 80px auto;
       line-height: 1.6;
-      padding: 20px;
+      padding: var(--pad);
     }
     h1 {
-      font-size: 48px;
+      font-size: 40px;
+      margin: 0 0 6px 0;
+      font-weight: 700;
     }
-    h2 {
-      margin-top: 50px;
+    .subhead {
+      margin: 0 0 28px 0;
+    }
+    details {
+      margin: 18px 0;
+      padding: 0;
+    }
+    summary {
+      cursor: pointer;
+      font-size: 14pt;
+      font-weight: 700;
+      list-style: none;
+      outline: none;
+      padding: 10px 0;
+      border-top: 1px solid #ddd;
+      user-select: none;
+    }
+    details:last-of-type summary {
+      border-bottom: 1px solid #ddd;
+    }
+    summary::-webkit-details-marker {
+      display: none;
+    }
+    .summary-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .caret {
+      font-weight: 700;
+      font-size: 12pt;
+      width: 24px;
+      text-align: right;
+      flex: 0 0 auto;
+    }
+    details[open] .caret {
+      transform: rotate(90deg);
+    }
+    .content {
+      padding: 10px 0 6px 0;
+    }
+    .block-title {
+      font-weight: 700;
+      margin: 18px 0 6px 0;
+    }
+    .lines {
+      margin: 0;
+      padding: 0;
+    }
+    .line {
+      margin: 0 0 8px 0;
+    }
+    .muted {
+      color: #333;
+    }
+    .spacer {
+      height: 6px;
+    }
+    .contact {
+      margin-top: 40px;
+      border-top: 1px solid #ddd;
+      padding-top: 18px;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+      border-bottom: 1px solid #bbb;
+    }
+    a:hover {
+      border-bottom-color: #000;
     }
   </style>
 </head>
 <body>
 
-<h1>Theodore</h1>
-<p><strong>Finance × Data × AI</strong></p>
-<p>Designing structured decision systems.</p>
+  <h1>Theodore Ouyang</h1>
+  <p class="subhead"><strong>Finance × Data × AI</strong><br><span class="muted">Designing structured decision systems</span></p>
 
-<h2>Finance</h2>
-<p>Investment research, valuation modeling, ESG screening frameworks.</p>
+  <!-- 1 -->
+  <details>
+    <summary>
+      <div class="summary-row">
+        <span>1. 个人简介（Brief Summary）</span>
+        <span class="caret">›</span>
+      </div>
+    </summary>
+    <div class="content">
+      <p class="line">1.1 身份定位陈述</p>
+      <p class="line">1.2 方法论与能力主轴</p>
+    </div>
+  </details>
 
-<h2>Data</h2>
-<p>ETL pipelines, ranking systems, structured screening architecture.</p>
+  <!-- 2 -->
+  <details>
+    <summary>
+      <div class="summary-row">
+        <span>2. Education</span>
+        <span class="caret">›</span>
+      </div>
+    </summary>
+    <div class="content">
+      <p class="line">Duke University</p>
+      <p class="line">Master of Engineering in Risk Engineering, Financial Risk Concentration</p>
+      <p class="line">Bachelor of Science in Mathematics (Dual-Degree Undergraduate Program)</p>
+      <div class="spacer"></div>
+      <p class="line">Graduate Merit Scholarship — Highest-tier merit-based award covering 50 percent of tuition (awarded within the MEng cohort)</p>
+    </div>
+  </details>
 
-<h2>AI</h2>
-<p>Evaluation rubric design, dataset construction, model governance.</p>
+  <!-- 3 -->
+  <details>
+    <summary>
+      <div class="summary-row">
+        <span>3. AI</span>
+        <span class="caret">›</span>
+      </div>
+    </summary>
+    <div class="content">
 
-<p style="margin-top: 60px;">
-Contact: theodore.impact.invest@gmail.com
-</p>
+      <p class="block-title">3.1 Micro1: LLM Contextual Advertising Domain Leadership & A/B-Validated Decision Playbooks</p>
+      <p class="line">Served as the domain expert for contextual advertising in LLM chat experiences, translating ambiguous ad-strategy tradeoffs into clear decision criteria</p>
+      <p class="line">Used a consistent workflow of marketing research, structured debate, interviews with senior domain experts, and A/B validation to raise decision confidence and reduce low-value experiments</p>
+      <p class="line">Applied the same decision framework across consumer categories including travel, food delivery, FMCG, and e-commerce, ensuring consistency rather than one-off judgments</p>
+      <p class="line">Representative example in travel-intent ads: compared a shortlist display of about 20 hotels with a full-inventory display of more than 100 hotels for a booking brand; recommended full inventory to capture clicks and reduce competitive leakage; validated via A/B testing and documented the guideline for future use</p>
+      <p class="line">Codified when scarcity marketing is likely to work by defining criteria such as decision-journey length, market-leader dynamics, and luxury or design-led categories, avoiding misapplication in long-journey decisions like travel planning</p>
+      <p class="line">Narrowed experiment scope by replacing step-by-step settings with 2 representative endpoints, default versus scarcity, and validating the best default through A/B testing</p>
+      <p class="line">Maintained evaluation rigor at scale through rubric-based scoring and written rationales, calibration and adjudication on borderline relevance and usefulness, and validity checks under landing-page variants, geo or session differences, redirects, and page changes; flagged rubric and workflow gaps as tasks evolved</p>
+
+      <p class="block-title">3.2 Alignerr: Frontier LLM Capability Boundary Probing via Graduate-Level Physics & Risk-Engineering Benchmarks</p>
+      <p class="line">Designed graduate-level, computation-heavy scientific reasoning benchmarks to probe the capability boundaries of a frontier large language model, prioritizing substance over trick wording</p>
+      <p class="line">Built physics problems centered on long-form derivations, invariant-based reasoning, and tight constraint management to prevent shortcut solutions</p>
+      <p class="line">Recombined rigorous physics foundations into mechanics-heavy prompts that demand both physical intuition and careful mathematical derivations</p>
+      <p class="line">Converted risk-engineering research themes into quantitative prompts that require explicit assumptions, nontrivial modeling choices, and end-to-end reasoning</p>
+      <p class="line">Raised difficulty by layering advanced techniques and edge conditions, pushing problems beyond standard textbook patterns</p>
+      <p class="line">Representative example: designed a right-triangle kinematics puzzle with path-invariant vertical time, reducing optimization to horizontal scheduling; proved the fastest path, showed the slowest path has no maximizer but a supremum, and derived harmonic-number asymptotics for a staircase construction approaching the bound</p>
+      <p class="line">Reused the same layered-difficulty design playbook across multiple topics and scenarios, balancing high-compute reasoning with creativity</p>
+
+      <p class="block-title">3.3 Alignerr: End-to-End RLHF Preference Data Engineering with Scenario Design, Rubrics & A/B Ranking Signals</p>
+      <p class="line">Owned end-to-end human preference data engineering for RLHF alignment, designing scenarios, datasets, and rubrics to rank multiple model variants via A/B preference tests</p>
+      <p class="line">Crafted evaluation scenarios that probe where strong reasoning diverges from human engineering criteria, turning alignment goals into testable, domain-grounded tasks</p>
+      <p class="line">Built realistic input datasets with natural messiness and confounders, avoiding contrived control-variable setups so model behavior reflects real decision contexts</p>
+      <p class="line">Defined quantifiable rubrics and structured response requirements to convert subjective judgments into consistent, rankable preference signals</p>
+      <p class="line">Authored reusable task templates plus data-generation rules so each scenario can be re-instantiated and rerun at high volume without synthetic-looking artifacts</p>
+      <p class="line">Representative example: designed an ESG rating evaluation that surfaces old-company advantage bias by pairing comparable new vs. established firms and rewarding substantive performance over disclosure tenure; applied the same bias-probing approach across multiple domains and scenarios</p>
+      <p class="line">Produced pairwise rankings with graded preference strength and clear comparative rationales that pinpointed failure modes and decision-critical trade-offs</p>
+      <p class="line">Supported evaluator consistency through lightweight calibration on edge cases and evidence re-check steps when inputs or sources were inconsistent</p>
+
+      <p class="block-title">3.4 Duke University: Sustainability Event Intelligence Labeling for Equity Research Backtests & AI Workflows</p>
+      <p class="line">Designed a labeled dataset linking firm-level sustainability events to subsequent stock returns, preparing clean inputs for equity research backtests, systematic screening rules and future ML or AI workflows</p>
+      <p class="line">Reviewed 10-K filings, sustainability reports, proxy statements and news flow, coding each event’s dimension, direction and estimated materiality, then merging labels with return and fundamentals data in Python</p>
+
+    </div>
+  </details>
+
+  <!-- 4 -->
+  <details>
+    <summary>
+      <div class="summary-row">
+        <span>4. Finance</span>
+        <span class="caret">›</span>
+      </div>
+    </summary>
+    <div class="content">
+
+      <p class="block-title">4.1 Jones Lang LaSalle (JLL): Greater China Capital Markets Underwriting with Structured Screening, Valuation & Diligence Readiness</p>
+      <p class="line">Representative example: supported a cross border China office mandate for a Southeast Asian conglomerate, with ESG embedded into underwriting</p>
+      <p class="line">Screened 22 cities with JLL’s China office market framework and a PESTLE lens, narrowing to 5 core markets and a 20 asset universe</p>
+      <p class="line">Compared cities on liquidity and institutional grade stock across 4 investable regions identified by JLL research, then focused on Beijing, Shanghai, Guangzhou, Shenzhen, and Chengdu</p>
+      <p class="line">Underwrote shortlisted assets using 3 valuation approaches: discounted cash flow, replacement cost, and comparable transactions</p>
+      <p class="line">Built an ESG pre-screening gate inspired by the GRESB Real Estate Assessment, consolidating around 40 ESG and operating indicators into 1 template</p>
+      <p class="line">Ran the desktop gate to remove about 40 percent of candidate assets before full valuation and due diligence, mainly due to ESG red flags or outsized future capital expenditure, CAPEX</p>
+      <p class="line">Structured screening into Management, Performance, and Development to link governance quality, environmental performance, and forward upgrade risk to underwriting</p>
+      <p class="line">Management checks covered ESG policy coverage, ownership and SPV transparency, unresolved compliance or safety issues, and availability of 12 months continuous records</p>
+      <p class="line">Performance benchmarking covered energy and carbon intensity, water use, waste, green building certifications, and evidence of efficiency upgrades</p>
+      <p class="line">Development screening assessed upgrade and CAPEX risk to meet tighter energy codes and carbon requirements, plus refurbishment or extension risks impacting cash flow and exit assumptions</p>
+      <p class="line">Used peer benchmarking within the same city, submarket, vintage, and system type, then translated results into red, amber, green signals for go or no go decisions</p>
+      <p class="line">Where key utilities data were missing, used proxy indicators such as equipment age, chiller efficiency, building management systems, sub metering, indoor air monitoring, and maintenance records</p>
+      <p class="line">Built 10 Excel, Python, and Tableau dashboards combining valuation outputs, market fundamentals, and ESG signals at city, asset, and pipeline levels, including scenario based risk exposure views</p>
+      <p class="line">Led bilingual briefings for capital markets leadership and client managers; outputs directly set site visit sequencing, targeted ESG questions, and governance and due diligence checklists</p>
+      <p class="line">Produced standardized asset books and data packs per property, covering submarket positioning, tenant concentration, WALE, vacancy, rents, operating costs, models, and diligence notes in a consistent structure</p>
+
+      <p class="block-title">4.2 SAIF Partners (SoftBank Asia Infrastructure Funds): Thematic Investment Analytics in Dental with Policy Intelligence & Governance/Compliance Risk Gates</p>
+      <p class="line">Consolidated 2000 funding cases and 200 regulatory items into a standardized dataset of more than 600 Greater China dental deals and 120 to 150 actionable regulatory events</p>
+      <p class="line">The dataset became the backbone for systematic screening, thematic analysis, and follow-on financial modeling across the broader Greater China dental theme</p>
+      <p class="line">Used the database to test whether orthodontics was large enough, structurally attractive, and manageable from a policy risk perspective, supporting a dedicated subsector focus</p>
+      <p class="line">Owned 4 public data workstreams: funding flows, policy and regulation, industry structure, and competitive landscape across aligner brands, private chains, and dental digital and SaaS providers</p>
+      <p class="line">Partnered with the VP and team to translate findings into a deduplicated longlist of more than 100 orthodontics related targets across brands, services, equipment, and software</p>
+      <p class="line">Ran a data pass mapping each target’s subsector tag, funding history, valuation range, and investor base, then assigned pass, watch, or exclude labels with concise risk notes</p>
+      <p class="line">Reduced the universe to more than 10 candidates by screening against SAIF exclusion lists and conduct codes for regulatory, reputational, shareholder, and single supplier red flags</p>
+      <p class="line">Applied a governance focused ESG gate anchored to MSCI ESG Key Issues, translating Corporate Governance and Corporate Behavior topics into 10 subcategories and 33 actionable checks</p>
+      <p class="line">Drafted pass, conditional, and deny memos that guided diligence depth and valuation discussions, highlighting ownership and control complexity, related party exposure, disclosure gaps, audit quality concerns, and business ethics risks</p>
+      <p class="line">Presented governance and risk insights to partners via scenario style memos, prompting 2 management meetings and additional auditor tenure checks before advancing finalists to on-site due diligence</p>
+      <p class="line">Representative example: flagged accounting and related party issues in 2 finalists; recommendations became management Q and A and auditor tenure checks, reshaping site visit diligence Representative of similar work across categories and contexts</p>
+      <p class="line">Unified inputs from about 20 sources including CVSource, industry news, and corporate registries; deduplicated rounds, standardized entities and subsector tags, and corrected errors in dates, rounds, and currencies</p>
+
+      <p class="block-title">4.3 CITIC Securities: Equity Research Analytics Enablement through Sector Databases, Valuation Stress-Testing & Trading-Color Synthesis</p>
+      <p class="line">Supported equity and industry research at CITIC Securities by compiling sector datasets, stress-testing valuation assumptions and summarizing trading color for internal investment strategy discussions</p>
+
+    </div>
+  </details>
+
+  <!-- 5 -->
+  <details>
+    <summary>
+      <div class="summary-row">
+        <span>5. Data</span>
+        <span class="caret">›</span>
+      </div>
+    </summary>
+    <div class="content">
+
+      <p class="block-title">5.1 Jiritsu Network: Automated Token-Issuer Screening Infrastructure with Scalable ETL, Ranking Models & Counterparty Shortlisting</p>
+      <p class="line">Representative example: re-implemented GSIA negative screening and best-in-class selection as a "not for bad" then "go for good" workflow, moving from 18000 CoinGecko tokens to an 800-issuer universe and a 30-issuer shortlist for commercial, risk, and governance review</p>
+      <p class="line">Engineered a Python ETL with Prefect, DuckDB, and Parquet to ingest, standardize, and refresh large-scale token data for issuer analysis</p>
+      <p class="line">Built negative screens covering liquidity and pricing validity, data completeness, and basic governance and disclosure red flags to remove unworkable names early</p>
+      <p class="line">Added business relevance filters to focus on RWA, stablecoin, serious DeFi, and infrastructure issuers, excluding meme, gambling, and NSFW categories</p>
+      <p class="line">De-duplicated multi-chain and wrapped assets and mapped tokens to issuer-level entities to produce a partnership-ready counterparty list</p>
+      <p class="line">Trained a LightGBM pairwise ranker for "go for good", using uncertainty sampling to concentrate labeling on the hardest boundary decisions</p>
+      <p class="line">Used Leiden clustering to surface look-alike issuers and improve coverage and diversity beyond the top-ranked candidates</p>
+      <p class="line">Led governance and disclosure engagements with shortlisted issuers, aligning on reporting cadence, reserve transparency, and inputs needed for on-chain verification</p>
+      <p class="line">Structured 6 tokenization pilots with lower-risk counterparties, tying selection to clear disclosure commitments and verification readiness</p>
+      <p class="line">Made the pipeline repeatable and monitorable with scheduled runs, retries on failure, and Parquet-based outputs for fast reruns and backfills</p>
+
+      <p class="block-title">5.2 Euromonitor International: Large-Scale E-Commerce Data Standardization via Automated SKU ETL & Market-Entry Scenario Modeling</p>
+      <p class="line">Owned the China workstream for a global green home appliance market entry engagement for a European brand, translating energy-efficiency standards and subsidies into launch timing, pricing, and positioning scenarios for cross-regional strategy discussions</p>
+      <p class="line">Built category- and city-tier scenarios for timing and price positioning, accounting for subsidy volatility, tightening efficiency standards, and consumer trade-up in mid to high price bands</p>
+      <p class="line">Represented China in global stakeholder calls by aligning definitions of green products, calibrating expectations on policy rollout pace, and flagging approval, certification, and channel execution risks</p>
+      <p class="line">Standardized 50000 e-commerce SKUs across 5 platforms and 7 major appliance categories through an automated Python ETL pipeline, enabling consistent comparison of efficiency labels, price points, promotions, feature sets, and basic review signals</p>
+      <p class="line">Packaged the ETL logic into a reusable template for other APAC markets, doubling processing throughput and reducing duplicated manual data cleaning</p>
+      <p class="line">Visualized competition and shelf density in Tableau to surface under-served combinations of high efficiency and mid to high price positioning, especially in tier 1 and tier 2 city demand</p>
+      <p class="line">Representative example: separated national programs from local pilot subsidies and mapped transitions from old to new efficiency standards to identify categories with stable requirements versus those likely to tighten again; applied the same approach across multiple categories and market scenarios</p>
+
+      <p class="block-title">5.3 China Construction Bank Asia: Quantitative Issuer Scoring System using PCA-Based Universe Construction & Methodology Governance</p>
+      <p class="line">Applied principal component analysis to 10 sustainability indicators across 2000 issuers, constructing a ranked investment universe that highlighted the top 28 percent for follow-on credit and equity analysis</p>
+      <p class="line">Specified scoring logic, data sources and edge cases in a concise methodology note, clarifying model behavior for product managers and risk officers evaluating the scoring platform’s adoption</p>
+
+    </div>
+  </details>
+
+  <!-- 6 -->
+  <details>
+    <summary>
+      <div class="summary-row">
+        <span>6. ESG</span>
+        <span class="caret">›</span>
+      </div>
+    </summary>
+    <div class="content">
+
+      <p class="block-title">6.1 Duke Law School: Environmental & Coastal Governance Framework Analysis across Regulation, MRV Pathways & Nature-Based Solutions</p>
+      <p class="line">Compared regulatory frameworks across CWA Section 404, the ESA, and Florida mangrove protections, benchmarking against Greater Bay Area coastal governance approaches</p>
+      <p class="line">Analyzed the West Lake restoration as a nature-based solution, mapping MRV metrics, blue-carbon pathways, and key co-benefits to support policy-aligned evaluation and accountability</p>
+
+      <p class="block-title">6.2 Nicholas School of the Environment: Shareholder Stewardship & Governance Risk Review with Committee-Style Voting Memos</p>
+      <p class="line">Reviewed proxy statements and 10-K filings to identify pay-performance gaps, board oversight weaknesses, and governance risks relevant to shareholder stewardship</p>
+      <p class="line">Drafted a committee-style voting memo recommending opposition to say-on-pay, withholding support for the chair, and supporting priority ESG proposals, with clear decision rationale and risk framing</p>
+
+      <p class="block-title">6.3 Hubble Network: Board-Ready ESG Strategy & Market Positioning with Landscape Research, Segmentation Forecasting & Concept-Test Validation</p>
+      <p class="line">Delivered a 100 page market landscape report integrating SWOT, PESTLE, and expert interviews, highlighting ESG and regulatory tailwinds and risk factors, and presented recommendations to the board</p>
+      <p class="line">Developed a segmentation and projection model using ESG and compliance as key decision criteria, prioritized 2 segments, and ran scenario based market tests that forecasted 24 percent annual growth over 3 years</p>
+      <p class="line">Crafted positioning for existing IoT products by linking features to measurable ESG outcomes, and concept test simulations reached 85 percent customer satisfaction</p>
+
+      <p class="block-title">6.4 Nicholas School of the Environment: Sustainability Consulting Delivery via LCA Diagnostics & Supply-Chain Optimization with Measurable Impact</p>
+      <p class="line">Conducted a life cycle assessment (LCA) using the Ecoinvent database to identify 5 key environmental impact drivers; developed targeted optimization strategies that improved the client’s sustainability score by 66 percent</p>
+      <p class="line">Modeled and optimized a global raw-material supply chain in GaBi, evaluating 6 sourcing options; recommended a sourcing plan that reduced both costs and environmental footprint by 50 percent</p>
+
+    </div>
+  </details>
+
+  <!-- 7 -->
+  <details>
+    <summary>
+      <div class="summary-row">
+        <span>7. Additional Information</span>
+        <span class="caret">›</span>
+      </div>
+    </summary>
+    <div class="content">
+      <p class="line"><span class="block-title" style="display:inline;">Financial Modeling and Investment:</span> DCF, trading and transaction comparables, replacement-cost triangulation, cash-flow and scenario analysis, screening frameworks, investment-universe construction, Excel model auditing, committee-ready shortlists and memos, institutional-grade model review, assumption validation, and investment decision support</p>
+      <p class="line"><span class="block-title" style="display:inline;">Mathematics:</span> probability theory, mathematical statistics, stochastic processes, stochastic calculus, financial mathematics, linear algebra, real analysis, complex variables, ordinary and partial differential equations, dynamical systems, optimization</p>
+      <p class="line"><span class="block-title" style="display:inline;">Data and AI:</span> Python (pandas), SQL, R (basic); machine learning; ETL pipelines; web scraping; dataset design and labeling for quantitative and AI model evaluation, gold-standard reference construction, quality adjudication, and evaluation rubric design</p>
+      <p class="line"><span class="block-title" style="display:inline;">Analytics and Tools:</span> Excel (multi-sheet models, auditing, sensitivity analysis), Power BI, Tableau, Alteryx, data validation workflows, variance analysis, dashboard design, documentation of assumptions, checks and edge-case treatments</p>
+      <p class="line"><span class="block-title" style="display:inline;">Communication and Teaching:</span> bilingual presentations, methodology briefings, written step-by-step explanations of model logic, training materials for screening rules, dashboards and quantitative workflows</p>
+      <p class="line"><span class="block-title" style="display:inline;">Languages:</span> English (C1, fluent); Mandarin (native); Cantonese (basic spoken)</p>
+    </div>
+  </details>
+
+  <div class="contact">
+    <p class="line">Contact: <a href="mailto:theodore.impact.invest@gmail.com">theodore.impact.invest@gmail.com</a></p>
+  </div>
 
 </body>
 </html>

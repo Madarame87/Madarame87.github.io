@@ -97,15 +97,6 @@ p {
   color: var(--text-soft);
 }
 
-.avatar {
-  width: 112px;
-  height: 112px;
-  border-radius: 50%;
-  border: 1.5px solid var(--line);
-  background: #fff;
-  margin-bottom: 34px;
-}
-
 .home-shell {
   min-height: 100vh;
 }
@@ -113,7 +104,7 @@ p {
 .home-hero {
   max-width: 700px;
   margin: 0 auto;
-  padding-top: 8vh;
+  padding-top: clamp(96px, 12vh, 140px);
 }
 
 .tagline {
@@ -300,11 +291,6 @@ details.project > .details-body > .details-body-inner {
   .site-nav {
     font-size: 12px;
     top: 16px;
-  }
-
-  .avatar {
-    width: 96px;
-    height: 96px;
   }
 
   h1 {

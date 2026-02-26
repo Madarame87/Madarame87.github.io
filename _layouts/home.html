@@ -1,0 +1,62 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en" class="home-html">
+<head>
+
+    {% if site.analytics-google %}
+        {% include analytics-google.html %}
+    {% endif %}
+
+    <meta charset="utf-8">
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <meta name=author content="{{ site.title }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    {% seo %}
+
+    {% include favicon.html %}
+
+    <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ site.url }}{{ "/feed.xml" }}" />
+
+    <style>
+    {% if site.dark-theme == "auto" %}
+        {% capture scss_sheet %}
+            {% include style.scss %}
+            @media (prefers-color-scheme: dark) {
+                {% include style-dark.scss %}
+            }
+        {% endcapture %}
+    {% elsif site.dark-theme %}
+        {% capture scss_sheet %}{% include style-dark.scss %}{% endcapture %}
+    {% else %}
+        {% capture scss_sheet %}{% include style.scss %}{% endcapture %}
+    {% endif %}
+
+    {{ scss_sheet | scssify }}
+    </style>
+
+</head>
+<body class="home-body">
+    <main class="home-landing" role="main">
+        <section class="home-hero" aria-label="Hero">
+            <h1 class="home-title">{{ site.title }}</h1>
+            <p class="home-subtitle">{{ site.bio }}</p>
+        </section>
+
+        <div class="home-ink-secondary" aria-hidden="true"></div>
+        <div class="home-divider" aria-hidden="true"></div>
+
+        <div class="home-nav-anchor">
+            {% include nav.html %}
+        </div>
+
+        <div class="home-footer-anchor">
+            {% include footer.html %}
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,57 @@
+.nav,
+.nav-home {
+  color: #111;
+  text-align: center;
+
+  > .list {
+    list-style: none;
+    margin: 0;
+    padding: 0 16px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+
+    > .item {
+      display: inline-flex;
+      flex: 0 0 auto;
+    }
+
+    > .item > .link {
+      display: inline-block;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5;
+      text-decoration: none;
+      color: #111;
+      opacity: 0.72;
+      transition: opacity 0.2s ease-in-out;
+      padding: 0;
+    }
+
+    > .item > .link:visited {
+      color: #111;
+    }
+
+    > .item > .link:hover,
+    > .item > .link:focus {
+      color: #111;
+      opacity: 1;
+    }
+  }
+}
+
+.nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 24px;
+}
+
+.nav-home {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,29 @@
+.header-home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  text-align: center;
+  position: relative;
+  z-index: 99;
+
+  > .title {
+    font-size: 48px;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: #111;
+    font-weight: 500;
+    margin: 0 0 16px;
+  }
+
+  > .description {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+    font-style: normal;
+    color: #666;
+    margin: 0;
+    max-width: 640px;
+  }
+}

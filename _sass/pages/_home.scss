@@ -44,13 +44,15 @@
   overflow: hidden;
 }
 
-.home-body {
+.home-body,
+.ink-body {
   margin: 0;
   position: relative;
   background: #ffffff;
 }
 
-.home-body::before {
+.home-body::before,
+.ink-body::before {
   content: "";
   position: fixed;
   inset: 0;
@@ -63,20 +65,25 @@
   opacity: 0.045;
 }
 
-.home-landing {
+.home-landing,
+.ink-surface {
   --duke-navy-rgb: 1, 33, 105;
   --duke-royal-rgb: 0, 83, 155;
   --duke-haze-rgb: 24, 61, 129;
   position: relative;
   isolation: isolate;
-  height: 100vh;
   min-height: 100vh;
   overflow: hidden;
   background: #ffffff;
   color: #111;
 }
 
-.home-landing::before {
+.home-landing {
+  height: 100vh;
+}
+
+.home-landing::before,
+.ink-surface::before {
   content: "";
   position: absolute;
   inset: -20vh -16vw;
@@ -101,7 +108,8 @@
   animation: homeBaseFlow 96s ease-in-out infinite alternate;
 }
 
-.home-landing::after {
+.home-landing::after,
+.ink-surface::after {
   content: "";
   position: absolute;
   left: -28vw;
@@ -119,7 +127,8 @@
   animation: homePrimaryFlow 56s ease-in-out infinite alternate;
 }
 
-.home-ink-secondary {
+.home-ink-secondary,
+.ink-secondary {
   position: absolute;
   inset: -20vh -24vw;
   pointer-events: none;
@@ -133,7 +142,8 @@
   animation: homeSecondaryFlow 16s ease-in-out infinite alternate;
 }
 
-.home-ink-secondary::before {
+.home-ink-secondary::before,
+.ink-secondary::before {
   content: "";
   position: absolute;
   right: -16vw;
@@ -290,7 +300,11 @@
   .home-landing::before,
   .home-landing::after,
   .home-ink-secondary,
-  .home-ink-secondary::before {
+  .home-ink-secondary::before,
+  .ink-surface::before,
+  .ink-surface::after,
+  .ink-secondary,
+  .ink-secondary::before {
     animation: none;
   }
 }

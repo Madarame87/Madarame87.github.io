@@ -1,0 +1,109 @@
+.profile-wrapper {
+  width: 100%;
+  max-width: none;
+}
+.page.profile.ink-surface {
+  margin-top: 0;
+  padding: 8.8rem 0 4.6rem;
+  overflow-x: clip;
+}
+.page.profile.ink-surface::before {
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(
+      220px 120px at 48% 28%,
+      rgba(255, 255, 255, 0.8) 0%,
+      rgba(255, 255, 255, 0.5) 8%,
+      rgba(255, 255, 255, 0.25) 15%,
+      rgba(255, 255, 255, 0.1) 18%,
+      rgba(255, 255, 255, 0) 22%
+    ),
+    radial-gradient(
+      180px 100px at 52% 72%,
+      rgba(255, 255, 255, 0.65) 0%,
+      rgba(255, 255, 255, 0.4) 8%,
+      rgba(255, 255, 255, 0.18) 15%,
+      rgba(255, 255, 255, 0.06) 18%,
+      rgba(255, 255, 255, 0) 22%
+    );
+  filter: none;
+  animation: none;
+}
+.page.profile > .nav { z-index: 5; }
+.page.profile > .ink-secondary { z-index: 1; }
+.page.profile > .site-footer,
+.profile-shell {
+  position: relative;
+  z-index: 4;
+}
+.profile-shell {
+  width: min(840px, calc(100% - 3.2rem));
+  margin: 0 auto;
+  padding-bottom: clamp(14rem, 20vw, 24rem);
+}
+.profile-paper {
+  margin: 0;
+  padding: clamp(2.2rem, 4vw, 3.2rem) clamp(1.7rem, 3.5vw, 3rem);
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.profile-paper + .profile-paper {
+  margin-top: clamp(7.6rem, 9vw, 9.2rem);
+}
+.profile-section-title {
+  margin: 0 0 2rem;
+  font-size: clamp(2.5rem, 3.2vw, 3.1rem);
+  line-height: 1.2;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: #101828;
+}
+.profile-summary p {
+  margin: 0;
+  color: #404b5c;
+  font-size: 1.62rem;
+  line-height: 1.8;
+  font-weight: 400;
+}
+.profile-summary p + p { margin-top: 1.5rem; }
+.profile-section-subtitle {
+  margin: 0 0 1.6rem;
+  color: #162132;
+  font-size: clamp(1.95rem, 2.4vw, 2.3rem);
+  line-height: 1.32;
+  font-weight: 500;
+}
+.profile-degree-group + .profile-degree-group { margin-top: 2.8rem; }
+.profile-degree-title {
+  margin: 0;
+  color: #101b2b;
+  font-size: 1.66rem;
+  line-height: 1.45;
+  font-weight: 500;
+}
+.profile-degree-meta {
+  margin: 0.45rem 0 0;
+  color: #586375;
+  font-size: 1.48rem;
+  line-height: 1.6;
+  font-weight: 400;
+}
+.profile-degree-meta + .profile-degree-meta { margin-top: 0.45rem; }
+
+@media (max-width: 640px) {
+  .page.profile.ink-surface { padding: 7.6rem 0 3.8rem; }
+  .profile-shell {
+    width: calc(100% - 1.6rem);
+    padding-bottom: clamp(11rem, 24vw, 16rem);
+  }
+  .profile-paper {
+    padding: 2rem 1.4rem;
+    border-radius: 0;
+  }
+  .profile-paper + .profile-paper { margin-top: 6.8rem; }
+}

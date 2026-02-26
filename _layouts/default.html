@@ -40,15 +40,18 @@ layout: compress
 
     {{ scss_sheet | scssify }}
     </style>
+    {% if page.title == "Profile" %}
+    <link rel="stylesheet" href="{{ "/assets/css/profile.css" | relative_url }}">
+    {% endif %}
 
 </head>
-<body>
-    <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}{% if page.title == "Home" %} home-wrapper{% endif %}">
+<body{% if page.title == "Profile" %} class="ink-body profile-body"{% endif %}>
+    <div class="wrapper-{% if site.width == "normal" %}normal{% elsif site.width == "large" %}large{% endif %}{% if page.title == "Home" %} home-wrapper{% endif %}{% if page.title == "Profile" %} profile-wrapper{% endif %}">
         {% if page.layout == "post" %}
             <div class="post">
         {% else %}
             {% if showHeader != true %}
-                <div class="page {{ page.title | downcase }}">
+                <div class="page {{ page.title | downcase }}{% if page.title == "Profile" %} ink-surface{% endif %}">
             {% else %}
                 <div class="{{ page.title | downcase }}">
             {% endif %}

@@ -38,7 +38,7 @@
   z-index: 4;
 }
 .profile-shell {
-  width: min(840px, calc(100% - 3.2rem));
+  width: min(1280px, calc(100% - 3.2rem));
   margin: 0 auto;
   padding-bottom: clamp(14rem, 20vw, 24rem);
 }
